@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GmarketSansBold.otf">
+            <string>GmarketSansBold</string>
+        </array>
+        <array key="GmarketSansMedium.otf">
+            <string>GmarketSansMedium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -16,58 +24,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JyW-Ws-8JI">
-                                <rect key="frame" x="0.0" y="109" width="414" height="753"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="111" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JyW-Ws-8JI">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="qhv-cU-3Rb" customClass="ListCell" customModule="Wandoo_practice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="qhv-cU-3Rb" customClass="ListCell" customModule="Wandoo_practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qhv-cU-3Rb" id="2hx-Xe-CsT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이폰 iOS 개발 완주반" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q48-dz-39z">
-                                                    <rect key="frame" x="20" y="11" width="158" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="18.5" width="374" height="18"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.01.26 ~" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX2-5G-RVY">
-                                                    <rect key="frame" x="20" y="40" width="88" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="20" y="46.5" width="87" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-ve-5ep">
-                                                    <rect key="frame" x="368" y="40" width="16" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="362" y="46.5" width="16.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL5-Tt-eMp">
-                                                    <rect key="frame" x="386" y="40" width="13" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="380.5" y="46.5" width="13.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yar-Lv-9t9">
+                                                    <rect key="frame" x="20" y="74" width="374" height="17"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWP-HJ-jym">
+                                                    <rect key="frame" x="20" y="74" width="379" height="17"/>
+                                                    <color key="backgroundColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="379" id="v21-QL-YFY"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPj-xQ-dvJ">
+                                                    <rect key="frame" x="321" y="46.5" width="17" height="15"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.82352941176470584" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6R-RI-jlO">
+                                                    <rect key="frame" x="340" y="46.5" width="13.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whh-jJ-53w">
+                                                    <rect key="frame" x="354.5" y="46.5" width="7.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Yar-Lv-9t9" firstAttribute="top" secondItem="zWP-HJ-jym" secondAttribute="top" id="3EW-Iy-nDN"/>
                                                 <constraint firstItem="aL5-Tt-eMp" firstAttribute="leading" secondItem="Viy-ve-5ep" secondAttribute="trailing" constant="2" id="3wh-SL-aCT"/>
-                                                <constraint firstItem="Viy-ve-5ep" firstAttribute="centerY" secondItem="oX2-5G-RVY" secondAttribute="centerY" id="8vr-Ln-JKO"/>
-                                                <constraint firstAttribute="trailing" secondItem="aL5-Tt-eMp" secondAttribute="trailing" constant="15" id="KyN-Pd-vrE"/>
-                                                <constraint firstItem="q48-dz-39z" firstAttribute="leading" secondItem="2hx-Xe-CsT" secondAttribute="leading" constant="20" symbolic="YES" id="PQr-Mw-Z6C"/>
-                                                <constraint firstItem="oX2-5G-RVY" firstAttribute="top" secondItem="q48-dz-39z" secondAttribute="bottom" constant="8" symbolic="YES" id="Szj-92-EUq"/>
-                                                <constraint firstItem="q48-dz-39z" firstAttribute="top" secondItem="2hx-Xe-CsT" secondAttribute="top" constant="11" id="cv9-QO-afz"/>
+                                                <constraint firstItem="zWP-HJ-jym" firstAttribute="top" secondItem="oX2-5G-RVY" secondAttribute="bottom" constant="13" id="4gP-SJ-4N3"/>
+                                                <constraint firstItem="V6R-RI-jlO" firstAttribute="centerY" secondItem="Whh-jJ-53w" secondAttribute="centerY" id="7vB-X7-GZm"/>
+                                                <constraint firstItem="oX2-5G-RVY" firstAttribute="centerY" secondItem="Viy-ve-5ep" secondAttribute="centerY" id="AZJ-ba-pCj"/>
+                                                <constraint firstItem="Whh-jJ-53w" firstAttribute="centerY" secondItem="Viy-ve-5ep" secondAttribute="centerY" id="CjU-nA-fzZ"/>
+                                                <constraint firstItem="zWP-HJ-jym" firstAttribute="leading" secondItem="q48-dz-39z" secondAttribute="leading" id="ELz-er-JLZ"/>
+                                                <constraint firstItem="Viy-ve-5ep" firstAttribute="leading" secondItem="Whh-jJ-53w" secondAttribute="trailing" id="I5F-xN-sWe"/>
+                                                <constraint firstAttribute="trailing" secondItem="aL5-Tt-eMp" secondAttribute="trailing" constant="20" id="KyN-Pd-vrE"/>
+                                                <constraint firstItem="V6R-RI-jlO" firstAttribute="leading" secondItem="QPj-xQ-dvJ" secondAttribute="trailing" constant="2" id="SKi-HE-KhU"/>
+                                                <constraint firstItem="oX2-5G-RVY" firstAttribute="top" secondItem="q48-dz-39z" secondAttribute="bottom" constant="10" id="Szj-92-EUq"/>
+                                                <constraint firstAttribute="bottom" secondItem="zWP-HJ-jym" secondAttribute="bottom" constant="20" id="TWi-Qs-mSY"/>
+                                                <constraint firstItem="Yar-Lv-9t9" firstAttribute="trailing" secondItem="aL5-Tt-eMp" secondAttribute="trailing" id="elv-dU-OcI"/>
+                                                <constraint firstItem="QPj-xQ-dvJ" firstAttribute="centerY" secondItem="V6R-RI-jlO" secondAttribute="centerY" id="mq7-F4-s6e"/>
+                                                <constraint firstItem="Yar-Lv-9t9" firstAttribute="leading" secondItem="oX2-5G-RVY" secondAttribute="leading" id="plY-w0-UVD"/>
                                                 <constraint firstItem="aL5-Tt-eMp" firstAttribute="centerY" secondItem="Viy-ve-5ep" secondAttribute="centerY" id="sjW-EX-pNf"/>
                                                 <constraint firstItem="oX2-5G-RVY" firstAttribute="leading" secondItem="q48-dz-39z" secondAttribute="leading" id="vOd-ET-Gpt"/>
+                                                <constraint firstItem="Whh-jJ-53w" firstAttribute="leading" secondItem="V6R-RI-jlO" secondAttribute="trailing" constant="1" id="wbo-Ek-dW9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="zWP-HJ-jym" firstAttribute="height" secondItem="qhv-cU-3Rb" secondAttribute="height" multiplier="0.153061" id="56M-aX-iM1"/>
+                                            <constraint firstItem="Yar-Lv-9t9" firstAttribute="height" secondItem="qhv-cU-3Rb" secondAttribute="height" multiplier="0.153061" id="XUl-Mw-ldD"/>
+                                            <constraint firstItem="q48-dz-39z" firstAttribute="leading" secondItem="qhv-cU-3Rb" secondAttribute="leading" constant="20" id="eba-TC-rkc"/>
+                                            <constraint firstAttribute="trailing" secondItem="q48-dz-39z" secondAttribute="trailing" constant="20" id="jDB-A8-7fU"/>
+                                        </constraints>
                                         <connections>
+                                            <outlet property="bgBar" destination="Yar-Lv-9t9" id="NNh-W0-ZL7"/>
+                                            <outlet property="contentView" destination="2hx-Xe-CsT" id="d62-p2-yjK"/>
                                             <outlet property="dateLabel" destination="oX2-5G-RVY" id="hba-LI-8KO"/>
+                                            <outlet property="doneNumofLec" destination="QPj-xQ-dvJ" id="3cD-ye-wq7"/>
                                             <outlet property="lectureLabel" destination="q48-dz-39z" id="017-nv-kvg"/>
                                             <outlet property="numLabel" destination="Viy-ve-5ep" id="Qy2-NW-LP3"/>
+                                            <outlet property="progressBar" destination="zWP-HJ-jym" id="btd-hI-C4H"/>
+                                            <outlet property="progressWidth" destination="v21-QL-YFY" id="7rO-vX-Sw4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,9 +141,15 @@
                                     <action selector="getInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MD7-v3-mAY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="W a n d o o !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2g-Ar-4qm">
-                                <rect key="frame" x="20" y="57" width="302" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W a n d o o !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2g-Ar-4qm">
+                                <rect key="frame" x="20" y="64" width="201.5" height="30"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의를 추가해주세요! : )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFu-co-oJX">
+                                <rect key="frame" x="119" y="444.5" width="176.5" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,16 +158,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="e2g-Ar-4qm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4AZ-lc-oTh"/>
-                            <constraint firstItem="JyW-Ws-8JI" firstAttribute="top" secondItem="e2g-Ar-4qm" secondAttribute="bottom" constant="10" id="4ha-OR-hhf"/>
+                            <constraint firstItem="JyW-Ws-8JI" firstAttribute="top" secondItem="e2g-Ar-4qm" secondAttribute="bottom" constant="20" id="4ha-OR-hhf"/>
+                            <constraint firstItem="QFu-co-oJX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="850-IV-WJS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JyW-Ws-8JI" secondAttribute="bottom" id="DiT-mE-yfp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gxa-MZ-XCR" secondAttribute="bottom" constant="30" id="GMc-xS-NNz"/>
                             <constraint firstItem="JyW-Ws-8JI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KWY-ir-Hv9"/>
-                            <constraint firstItem="e2g-Ar-4qm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="h1d-va-ezn"/>
+                            <constraint firstItem="e2g-Ar-4qm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h1d-va-ezn"/>
+                            <constraint firstItem="QFu-co-oJX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="osK-Gk-i5n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JyW-Ws-8JI" secondAttribute="trailing" id="thd-dv-E6P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gxa-MZ-XCR" secondAttribute="trailing" constant="20" id="wb9-M6-M8D"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lectureTable" destination="JyW-Ws-8JI" id="enK-nZ-des"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="Evk-Pe-ALA"/>
+                        <outlet property="noResultLabel" destination="QFu-co-oJX" id="1q5-eQ-7HP"/>
                         <segue destination="zZN-Y3-2ih" kind="presentation" identifier="showDetail" customClass="right" customModule="Wandoo_practice" customModuleProvider="target" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fhv-Xh-QfU"/>
                         <segue destination="EsD-cj-VC2" kind="presentation" identifier="getInfo" id="WgS-s3-Ya8"/>
                     </connections>
@@ -120,79 +189,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-4X-CK0">
-                                <rect key="frame" x="49.5" y="743" width="315" height="50"/>
-                                <state key="normal" image="Group 5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-4X-CK0" customClass="UIRoundButton" customModule="Wandoo_practice" customModuleProvider="target">
+                                <rect key="frame" x="49.5" y="731" width="315" height="57"/>
+                                <color key="backgroundColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
-                                    <action selector="close:" destination="EsD-cj-VC2" eventType="touchUpInside" id="UKq-Pb-Itk"/>
+                                    <action selector="addLectureButtonTapped:" destination="EsD-cj-VC2" eventType="touchUpInside" id="hgr-Gm-x3A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add course" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-9h-4w2">
-                                <rect key="frame" x="114" y="38" width="186" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <rect key="frame" x="110.5" y="38" width="193.5" height="30"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 이름을 알려주세요!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-Kh-CPB">
-                                <rect key="frame" x="43" y="125" width="188.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <rect key="frame" x="40" y="113" width="177.5" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4v-Uq-yne">
-                                <rect key="frame" x="43" y="164" width="322" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="40" y="145" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-Pu-rBH">
-                                <rect key="frame" x="46" y="368" width="322" height="57"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-Pu-rBH">
+                                <rect key="frame" x="47" y="335" width="320" height="216"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 시작 날짜는요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-Yn-uTJ">
-                                <rect key="frame" x="43" y="329" width="158" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <rect key="frame" x="40" y="303" width="151.5" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의는 총 몇 강 인가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2Q-er-qnZ">
-                                <rect key="frame" x="43" y="227" width="184.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <rect key="frame" x="40" y="208" width="177" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-Oj-Tk9">
-                                <rect key="frame" x="43" y="266" width="98" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <rect key="frame" x="40" y="240" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-Qx-ALd">
+                                <rect key="frame" x="173.5" y="751" width="67" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lMM-Ao-PTN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="9q8-Pu-rBH" firstAttribute="top" secondItem="9i4-Yn-uTJ" secondAttribute="bottom" constant="15" id="1y7-5M-Nc2"/>
                             <constraint firstItem="U4v-Uq-yne" firstAttribute="leading" secondItem="EJk-Kh-CPB" secondAttribute="leading" id="55R-Tj-mFh"/>
                             <constraint firstItem="Inl-4X-CK0" firstAttribute="centerX" secondItem="lMM-Ao-PTN" secondAttribute="centerX" id="6l3-g6-MXc"/>
-                            <constraint firstItem="9q8-Pu-rBH" firstAttribute="centerX" secondItem="lMM-Ao-PTN" secondAttribute="centerX" id="7q4-vq-hde"/>
+                            <constraint firstItem="yc7-Oj-Tk9" firstAttribute="trailing" secondItem="U4v-Uq-yne" secondAttribute="trailing" id="9nn-0G-1SN"/>
                             <constraint firstItem="x2Q-er-qnZ" firstAttribute="leading" secondItem="EJk-Kh-CPB" secondAttribute="leading" id="BJF-Ck-s9G"/>
-                            <constraint firstItem="lMM-Ao-PTN" firstAttribute="trailing" secondItem="U4v-Uq-yne" secondAttribute="trailing" constant="49" id="CgO-j1-1VE"/>
+                            <constraint firstItem="lMM-Ao-PTN" firstAttribute="trailing" secondItem="U4v-Uq-yne" secondAttribute="trailing" constant="40" id="CgO-j1-1VE"/>
                             <constraint firstItem="EJk-Kh-CPB" firstAttribute="top" secondItem="x7N-9h-4w2" secondAttribute="bottom" constant="45" id="ETQ-ek-k36"/>
+                            <constraint firstItem="oJH-Qx-ALd" firstAttribute="centerX" secondItem="Inl-4X-CK0" secondAttribute="centerX" id="HwD-dP-ja2"/>
                             <constraint firstItem="x7N-9h-4w2" firstAttribute="top" secondItem="lMM-Ao-PTN" secondAttribute="top" constant="38" id="KfP-m0-E5X"/>
-                            <constraint firstItem="lMM-Ao-PTN" firstAttribute="trailing" secondItem="yc7-Oj-Tk9" secondAttribute="trailing" constant="273" id="LTd-hC-tlU"/>
-                            <constraint firstItem="EJk-Kh-CPB" firstAttribute="leading" secondItem="lMM-Ao-PTN" secondAttribute="leading" constant="43" id="R5F-yj-LPX"/>
+                            <constraint firstItem="EJk-Kh-CPB" firstAttribute="leading" secondItem="lMM-Ao-PTN" secondAttribute="leading" constant="40" id="R5F-yj-LPX"/>
+                            <constraint firstItem="Inl-4X-CK0" firstAttribute="height" secondItem="R0D-0y-Ni1" secondAttribute="height" multiplier="0.067696" id="Vft-2f-BbU"/>
                             <constraint firstItem="x7N-9h-4w2" firstAttribute="centerX" secondItem="lMM-Ao-PTN" secondAttribute="centerX" id="YLt-vs-PYP"/>
                             <constraint firstItem="Inl-4X-CK0" firstAttribute="width" secondItem="R0D-0y-Ni1" secondAttribute="width" multiplier="0.76087" id="Z7q-sL-ATW"/>
                             <constraint firstItem="x2Q-er-qnZ" firstAttribute="top" secondItem="U4v-Uq-yne" secondAttribute="bottom" constant="29" id="dQE-D3-cIy"/>
-                            <constraint firstItem="9q8-Pu-rBH" firstAttribute="top" secondItem="9i4-Yn-uTJ" secondAttribute="bottom" constant="15" id="fPq-xD-5vO"/>
                             <constraint firstItem="9i4-Yn-uTJ" firstAttribute="leading" secondItem="x2Q-er-qnZ" secondAttribute="leading" id="hsB-55-X0f"/>
                             <constraint firstItem="yc7-Oj-Tk9" firstAttribute="top" secondItem="x2Q-er-qnZ" secondAttribute="bottom" constant="15" id="iLe-tP-pxV"/>
                             <constraint firstItem="yc7-Oj-Tk9" firstAttribute="leading" secondItem="U4v-Uq-yne" secondAttribute="leading" id="iz4-TE-LkI"/>
-                            <constraint firstItem="9q8-Pu-rBH" firstAttribute="width" secondItem="R0D-0y-Ni1" secondAttribute="width" multiplier="0.777778" id="uDH-lg-V1d"/>
+                            <constraint firstItem="9q8-Pu-rBH" firstAttribute="centerX" secondItem="lMM-Ao-PTN" secondAttribute="centerX" id="lXp-lW-Pbo"/>
+                            <constraint firstItem="oJH-Qx-ALd" firstAttribute="centerY" secondItem="Inl-4X-CK0" secondAttribute="centerY" id="tps-nU-2Zt"/>
                             <constraint firstItem="9i4-Yn-uTJ" firstAttribute="top" secondItem="yc7-Oj-Tk9" secondAttribute="bottom" constant="29" id="vkD-Up-kmO"/>
                             <constraint firstItem="U4v-Uq-yne" firstAttribute="top" secondItem="EJk-Kh-CPB" secondAttribute="bottom" constant="15" id="xI5-3c-Hds"/>
-                            <constraint firstItem="lMM-Ao-PTN" firstAttribute="bottom" secondItem="Inl-4X-CK0" secondAttribute="bottom" constant="15" id="zNO-z1-94K"/>
+                            <constraint firstItem="lMM-Ao-PTN" firstAttribute="bottom" secondItem="Inl-4X-CK0" secondAttribute="bottom" constant="20" id="zNO-z1-94K"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Exr-OB-XyE" appends="YES" id="1VB-3r-F5j"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="createButton" destination="Inl-4X-CK0" id="rKl-3o-cgD"/>
+                        <outlet property="dateOfLec" destination="9q8-Pu-rBH" id="tnd-gn-vnD"/>
+                        <outlet property="nameOfLec" destination="U4v-Uq-yne" id="Ol4-PD-PwT"/>
+                        <outlet property="numOfLec" destination="yc7-Oj-Tk9" id="jk7-dj-vDi"/>
+                        <outlet property="pickDate" destination="9q8-Pu-rBH" id="VsV-DX-eQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-qp-zDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Exr-OB-XyE">
+                    <connections>
+                        <action selector="bgTapped:" destination="EsD-cj-VC2" id="Wp8-7A-Fhj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="863.83928571428567"/>
         </scene>
@@ -204,121 +301,290 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-ln-FRU">
-                                <rect key="frame" x="30" y="64" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="A11-H2-3NB"/>
-                                    <constraint firstAttribute="height" constant="40" id="tvX-iD-8KE"/>
-                                </constraints>
-                                <state key="normal" image="close_ic"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-ln-FRU">
+                                <rect key="frame" x="30" y="64" width="29" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
                                 <connections>
                                     <action selector="goBack:" destination="zZN-Y3-2ih" eventType="touchUpInside" id="Zdk-Se-jZd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVb-mc-hbb">
-                                <rect key="frame" x="30" y="171" width="16" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="30" y="144" width="16" height="24.5"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강 수강" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5f-mI-VwT">
-                                <rect key="frame" x="48" y="171" width="43" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강 중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5f-mI-VwT">
+                                <rect key="frame" x="48" y="149" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.01.26 ~" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-hb-OLu">
-                                <rect key="frame" x="296" y="171" width="88" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="297" y="149" width="87" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="💻 파이썬 웹 개발 올인원 패키지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-LQ-8h3">
-                                <rect key="frame" x="30" y="134" width="360" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💻 파이썬 웹 개발 올인원 패키지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-LQ-8h3">
+                                <rect key="frame" x="30" y="114" width="354" height="20"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fz-U1-S2P">
-                                <rect key="frame" x="30" y="247" width="360" height="615"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fz-U1-S2P">
+                                <rect key="frame" x="30" y="212.5" width="354" height="649.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rh4-KN-fzj">
-                                        <rect key="frame" x="0.0" y="28" width="360" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkCell" id="rh4-KN-fzj" customClass="checkLecture" customModule="Wandoo_practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="354" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rh4-KN-fzj" id="Xrh-Ud-zFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-A8-pHh">
-                                                    <rect key="frame" x="41" y="4" width="272" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKt-Dp-VU4">
-                                                    <rect key="frame" x="10" y="11" width="8" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKt-Dp-VU4">
+                                                    <rect key="frame" x="10" y="14.5" width="7" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFq-Cv-tOv">
-                                                    <rect key="frame" x="328" y="10" width="19" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" systemColor="systemPinkColor"/>
-                                                    <state key="normal" image="checkmark" catalog="system"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFq-Cv-tOv">
+                                                    <rect key="frame" x="318" y="9.5" width="26" height="25"/>
+                                                    <color key="tintColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" image="circle" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                    </state>
+                                                    <state key="selected" image="circle.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="doneButtonTapped:" destination="rh4-KN-fzj" eventType="touchUpInside" id="fcy-64-OMw"/>
+                                                    </connections>
                                                 </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-MQ-WoX">
+                                                    <rect key="frame" x="50" y="5" width="254" height="34"/>
+                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="memoAdded:" destination="rh4-KN-fzj" eventType="editingDidEnd" id="RyV-To-ZHb"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="a5P-MQ-WoX" firstAttribute="leading" secondItem="rh4-KN-fzj" secondAttribute="leading" constant="50" id="CQq-ir-7kO"/>
+                                            <constraint firstItem="HKt-Dp-VU4" firstAttribute="leading" secondItem="rh4-KN-fzj" secondAttribute="leading" constant="10" id="ONA-H4-FpI"/>
+                                            <constraint firstAttribute="trailing" secondItem="AFq-Cv-tOv" secondAttribute="trailing" constant="10" id="amk-5W-fB6"/>
+                                            <constraint firstItem="HKt-Dp-VU4" firstAttribute="centerY" secondItem="rh4-KN-fzj" secondAttribute="centerY" id="kw7-HV-TJu"/>
+                                            <constraint firstItem="AFq-Cv-tOv" firstAttribute="centerY" secondItem="rh4-KN-fzj" secondAttribute="centerY" id="mxJ-vo-LnK"/>
+                                            <constraint firstItem="a5P-MQ-WoX" firstAttribute="centerY" secondItem="rh4-KN-fzj" secondAttribute="centerY" id="wY6-QY-8h5"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5P-MQ-WoX" secondAttribute="trailing" constant="50" id="zEs-Ig-6Dd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="doneButton" destination="AFq-Cv-tOv" id="57J-yN-T4B"/>
+                                            <outlet property="inputTextField" destination="a5P-MQ-WoX" id="32O-Ub-xti"/>
+                                            <outlet property="num" destination="HKt-Dp-VU4" id="dE9-Y6-eZQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zZN-Y3-2ih" id="OFo-7x-IiF"/>
+                                    <outlet property="delegate" destination="zZN-Y3-2ih" id="kVD-Nj-fqv"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-OL-WhN">
+                                <rect key="frame" x="30" y="178.5" width="360" height="17"/>
+                                <color key="backgroundColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="weE-et-NVN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-SM-UV4">
+                                <rect key="frame" x="84.5" y="149" width="9.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.82352941180000006" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTD-zr-d9o">
+                                <rect key="frame" x="356" y="63" width="28" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ellipsis" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeAlertDialog:" destination="zZN-Y3-2ih" eventType="touchUpInside" id="9b3-E7-Azb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강 수강!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdF-5W-smn">
+                                <rect key="frame" x="96" y="149" width="48" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JIv-8T-fSC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Aba-LQ-8h3" firstAttribute="top" secondItem="1wB-ln-FRU" secondAttribute="bottom" constant="30" id="2Z8-Ra-lWm"/>
+                            <constraint firstItem="oTD-zr-d9o" firstAttribute="trailing" secondItem="e9J-hb-OLu" secondAttribute="trailing" id="1ba-tG-v3e"/>
+                            <constraint firstItem="MdF-5W-smn" firstAttribute="centerY" secondItem="5Vg-SM-UV4" secondAttribute="centerY" id="2WD-g8-vLD"/>
+                            <constraint firstItem="Aba-LQ-8h3" firstAttribute="top" secondItem="1wB-ln-FRU" secondAttribute="bottom" constant="25" id="2Z8-Ra-lWm"/>
+                            <constraint firstItem="Aba-LQ-8h3" firstAttribute="top" secondItem="oTD-zr-d9o" secondAttribute="bottom" constant="29" id="3TB-uB-rbg"/>
+                            <constraint firstItem="5Vg-SM-UV4" firstAttribute="leading" secondItem="Y5f-mI-VwT" secondAttribute="trailing" constant="5.5" id="3ay-Xv-1RO"/>
                             <constraint firstItem="1wB-ln-FRU" firstAttribute="leading" secondItem="JIv-8T-fSC" secondAttribute="leading" constant="30" id="4m0-iY-3ZU"/>
+                            <constraint firstItem="e9J-hb-OLu" firstAttribute="top" secondItem="Aba-LQ-8h3" secondAttribute="bottom" constant="15" id="6Hc-qp-E2f"/>
+                            <constraint firstItem="fkx-OL-WhN" firstAttribute="top" secondItem="e9J-hb-OLu" secondAttribute="bottom" constant="15" id="8OH-wU-g1h"/>
                             <constraint firstItem="Y5f-mI-VwT" firstAttribute="centerY" secondItem="UVb-mc-hbb" secondAttribute="centerY" id="8Wf-Bh-eSe"/>
                             <constraint firstItem="1wB-ln-FRU" firstAttribute="top" secondItem="JIv-8T-fSC" secondAttribute="top" constant="20" id="9Hv-Na-xlS"/>
                             <constraint firstItem="UVb-mc-hbb" firstAttribute="top" secondItem="Aba-LQ-8h3" secondAttribute="bottom" constant="10" id="9MY-p1-Sik"/>
                             <constraint firstItem="JIv-8T-fSC" firstAttribute="bottom" secondItem="9fz-U1-S2P" secondAttribute="bottom" id="OSs-f4-wDh"/>
-                            <constraint firstItem="JIv-8T-fSC" firstAttribute="trailing" secondItem="9fz-U1-S2P" secondAttribute="trailing" constant="24" id="PyV-H3-MIl"/>
+                            <constraint firstItem="JIv-8T-fSC" firstAttribute="trailing" secondItem="9fz-U1-S2P" secondAttribute="trailing" constant="30" id="PyV-H3-MIl"/>
+                            <constraint firstItem="JIv-8T-fSC" firstAttribute="trailing" secondItem="e9J-hb-OLu" secondAttribute="trailing" constant="30" id="RQI-oJ-crJ"/>
                             <constraint firstItem="e9J-hb-OLu" firstAttribute="centerY" secondItem="Y5f-mI-VwT" secondAttribute="centerY" id="Rda-Pp-LkD"/>
+                            <constraint firstItem="fkx-OL-WhN" firstAttribute="height" secondItem="Ykp-cj-R50" secondAttribute="height" multiplier="0.0189732" id="WRg-Wa-nBT"/>
+                            <constraint firstItem="fkx-OL-WhN" firstAttribute="leading" secondItem="UVb-mc-hbb" secondAttribute="leading" id="YsL-ET-PYf"/>
+                            <constraint firstItem="9fz-U1-S2P" firstAttribute="top" secondItem="fkx-OL-WhN" secondAttribute="bottom" constant="17" id="ch9-2O-DS9"/>
+                            <constraint firstItem="Aba-LQ-8h3" firstAttribute="trailing" secondItem="e9J-hb-OLu" secondAttribute="trailing" id="dDV-XT-2Le"/>
                             <constraint firstItem="UVb-mc-hbb" firstAttribute="leading" secondItem="Aba-LQ-8h3" secondAttribute="leading" id="djg-zA-61X"/>
                             <constraint firstItem="Y5f-mI-VwT" firstAttribute="leading" secondItem="UVb-mc-hbb" secondAttribute="trailing" constant="2" id="gD9-5u-qAL"/>
                             <constraint firstItem="9fz-U1-S2P" firstAttribute="leading" secondItem="JIv-8T-fSC" secondAttribute="leading" constant="30" id="gat-YC-5Vp"/>
-                            <constraint firstItem="JIv-8T-fSC" firstAttribute="trailing" secondItem="e9J-hb-OLu" secondAttribute="trailing" constant="30" id="pdx-Ep-A9y"/>
+                            <constraint firstItem="5Vg-SM-UV4" firstAttribute="centerY" secondItem="Y5f-mI-VwT" secondAttribute="centerY" id="hNS-2t-kel"/>
                             <constraint firstItem="Aba-LQ-8h3" firstAttribute="leading" secondItem="1wB-ln-FRU" secondAttribute="leading" id="uv0-Tr-oay"/>
-                            <constraint firstItem="9fz-U1-S2P" firstAttribute="top" secondItem="e9J-hb-OLu" secondAttribute="bottom" constant="58" id="vfS-lm-MJ6"/>
+                            <constraint firstItem="MdF-5W-smn" firstAttribute="leading" secondItem="5Vg-SM-UV4" secondAttribute="trailing" constant="2" id="yEn-qc-mxi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eiq-YK-meX" appends="YES" id="lmX-Dm-1B7"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="E5g-IH-abQ"/>
                     <connections>
                         <outlet property="dateLabel" destination="e9J-hb-OLu" id="MGv-4S-olZ"/>
+                        <outlet property="detailView" destination="Ykp-cj-R50" id="Jj7-II-gZC"/>
+                        <outlet property="doneLecNum" destination="5Vg-SM-UV4" id="w5z-d6-F3W"/>
                         <outlet property="lectureLabel" destination="Aba-LQ-8h3" id="Ant-bO-qVM"/>
+                        <outlet property="moreButton" destination="oTD-zr-d9o" id="AOh-3H-Wbv"/>
                         <outlet property="numLabel" destination="UVb-mc-hbb" id="n8O-HN-dvD"/>
+                        <outlet property="progessWidth" destination="weE-et-NVN" id="Q9b-yV-Jeh"/>
+                        <outlet property="progressBar" destination="fkx-OL-WhN" id="OVQ-Pg-ecL"/>
+                        <outlet property="tableView" destination="9fz-U1-S2P" id="4Dl-yY-Grz"/>
+                        <outlet property="tableViewBottom" destination="OSs-f4-wDh" id="bCC-sg-gyf"/>
                         <segue destination="7H6-LB-Ca7" kind="unwind" identifier="unwind" customClass="Unwind_right" customModule="Wandoo_practice" customModuleProvider="target" unwindAction="unwind:" id="th1-Xj-pyq"/>
+                        <segue destination="FwI-5v-ynq" kind="presentation" identifier="reviseSegue" id="R1S-fV-P6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwf-qh-P5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7H6-LB-Ca7" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="eiq-YK-meX">
+                    <connections>
+                        <action selector="swipeLeftGesture:" destination="zZN-Y3-2ih" id="BD6-CA-v3Q"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="779.71014492753625" y="105.80357142857143"/>
+        </scene>
+        <!--Revise View Controller-->
+        <scene sceneID="n4e-yk-gTs">
+            <objects>
+                <viewController id="FwI-5v-ynq" customClass="ReviseViewController" customModule="Wandoo_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgc-O6-kqh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revise the course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-7K-zu6">
+                                <rect key="frame" x="57.5" y="38" width="299" height="30"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 이름을 알려주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6T-XG-E6Z">
+                                <rect key="frame" x="40" y="113" width="178" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8V-KT-uiN">
+                                <rect key="frame" x="40" y="145" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Dns-Cz-1QP">
+                                <rect key="frame" x="47" y="240" width="320" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztc-Jr-gDK" customClass="UIRoundButton" customModule="Wandoo_practice" customModuleProvider="target">
+                                <rect key="frame" x="45" y="729" width="324" height="59"/>
+                                <color key="backgroundColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="FwI-5v-ynq" eventType="touchUpInside" id="6Yl-GC-YnY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-16-mzz">
+                                <rect key="frame" x="183" y="750" width="48" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 시작 날짜는요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP0-fW-VrF">
+                                <rect key="frame" x="40" y="208" width="152" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5XA-la-wHp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="5XA-la-wHp" firstAttribute="trailing" secondItem="B8V-KT-uiN" secondAttribute="trailing" constant="40" id="5JJ-bf-mJm"/>
+                            <constraint firstItem="j6T-XG-E6Z" firstAttribute="leading" secondItem="5XA-la-wHp" secondAttribute="leading" constant="40" id="5ZJ-cz-hKv"/>
+                            <constraint firstItem="j6T-XG-E6Z" firstAttribute="top" secondItem="kqV-7K-zu6" secondAttribute="bottom" constant="45" id="7aa-rd-30B"/>
+                            <constraint firstItem="5XA-la-wHp" firstAttribute="bottom" secondItem="Ztc-Jr-gDK" secondAttribute="bottom" constant="20" id="Alp-zf-TqS"/>
+                            <constraint firstItem="kqV-7K-zu6" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="DdI-qp-d7A"/>
+                            <constraint firstItem="Ztc-Jr-gDK" firstAttribute="width" secondItem="sgc-O6-kqh" secondAttribute="width" multiplier="0.782609" id="IJ2-Wv-xWy"/>
+                            <constraint firstItem="Ztc-Jr-gDK" firstAttribute="height" secondItem="sgc-O6-kqh" secondAttribute="height" multiplier="0.0700713" id="JEX-Xg-t5U"/>
+                            <constraint firstItem="oP0-fW-VrF" firstAttribute="leading" secondItem="j6T-XG-E6Z" secondAttribute="leading" id="R7w-yQ-ZXi"/>
+                            <constraint firstItem="Dns-Cz-1QP" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="TPS-Zl-gOs"/>
+                            <constraint firstItem="kqV-7K-zu6" firstAttribute="top" secondItem="5XA-la-wHp" secondAttribute="top" constant="38" id="aCR-MC-A0r"/>
+                            <constraint firstItem="B8V-KT-uiN" firstAttribute="top" secondItem="j6T-XG-E6Z" secondAttribute="bottom" constant="15" id="bQS-Lo-qW5"/>
+                            <constraint firstItem="rL1-16-mzz" firstAttribute="centerX" secondItem="Ztc-Jr-gDK" secondAttribute="centerX" id="fqG-jp-3dG"/>
+                            <constraint firstItem="Ztc-Jr-gDK" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="kBA-d1-bKH"/>
+                            <constraint firstItem="rL1-16-mzz" firstAttribute="centerY" secondItem="Ztc-Jr-gDK" secondAttribute="centerY" id="lL7-20-OEB"/>
+                            <constraint firstItem="B8V-KT-uiN" firstAttribute="leading" secondItem="j6T-XG-E6Z" secondAttribute="leading" id="qc2-m4-jh5"/>
+                            <constraint firstItem="Dns-Cz-1QP" firstAttribute="top" secondItem="oP0-fW-VrF" secondAttribute="bottom" constant="15" id="vct-m4-0I6"/>
+                            <constraint firstItem="oP0-fW-VrF" firstAttribute="top" secondItem="B8V-KT-uiN" secondAttribute="bottom" constant="29" id="y0G-l6-Qoa"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XGi-BK-8a6" appends="YES" id="lkV-me-Be4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="nameOfLec" destination="B8V-KT-uiN" id="b6N-S2-ABT"/>
+                        <outlet property="startedDate" destination="Dns-Cz-1QP" id="Mxn-qO-fps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXd-0b-Q3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XGi-BK-8a6">
+                    <connections>
+                        <action selector="tappedBG:" destination="FwI-5v-ynq" id="R5b-Uc-AXP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1666.6666666666667" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>
         <image name="Group 4" width="86" height="86"/>
-        <image name="Group 5" width="315" height="50"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="close_ic" width="128" height="128"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

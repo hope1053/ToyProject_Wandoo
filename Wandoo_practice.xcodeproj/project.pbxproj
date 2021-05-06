@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB004D362641040A00320CCD /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB004D352641040A00320CCD /* ReviseViewController.swift */; };
+		CB004D3826410B0400320CCD /* UISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB004D3726410B0400320CCD /* UISetting.swift */; };
+		CB0539322632755F003FDF5D /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB0539312632755F003FDF5D /* GmarketSansMedium.otf */; };
+		CB053935263287D5003FDF5D /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB053934263287D5003FDF5D /* GmarketSansBold.otf */; };
 		CB7FB2F425C13DD200A34A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */; };
 		CB7FB2F625C13DD200A34A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */; };
 		CB7FB2F825C13DD200A34A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F725C13DD200A34A9F /* ViewController.swift */; };
@@ -15,11 +19,16 @@
 		CB7FB30025C13DD500A34A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7FB2FE25C13DD500A34A9F /* LaunchScreen.storyboard */; };
 		CB7FB30925C2637500A34A9F /* LectureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB30825C2637500A34A9F /* LectureInfo.swift */; };
 		CB7FB30C25C265F200A34A9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB30B25C265F200A34A9F /* DetailViewController.swift */; };
+		CBD996BE26312D440067C56A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD996BD26312D440067C56A /* Storage.swift */; };
 		CBDED97925C3C26800161E1B /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDED97825C3C26800161E1B /* GetInfoViewController.swift */; };
 		CBDED98A25C3D51100161E1B /* CustomSegueClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDED98925C3D51100161E1B /* CustomSegueClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB004D352641040A00320CCD /* ReviseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
+		CB004D3726410B0400320CCD /* UISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetting.swift; sourceTree = "<group>"; };
+		CB0539312632755F003FDF5D /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
+		CB053934263287D5003FDF5D /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		CB7FB2F025C13DD200A34A9F /* Wandoo_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wandoo_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +39,7 @@
 		CB7FB30125C13DD500A34A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7FB30825C2637500A34A9F /* LectureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfo.swift; sourceTree = "<group>"; };
 		CB7FB30B25C265F200A34A9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CBD996BD26312D440067C56A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CBDED97825C3C26800161E1B /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
 		CBDED98925C3D51100161E1B /* CustomSegueClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,17 +74,22 @@
 		CB7FB2F225C13DD200A34A9F /* Wandoo_practice */ = {
 			isa = PBXGroup;
 			children = (
-				CB7FB2F725C13DD200A34A9F /* ViewController.swift */,
-				CB7FB30825C2637500A34A9F /* LectureInfo.swift */,
-				CBDED97825C3C26800161E1B /* GetInfoViewController.swift */,
-				CB7FB2F925C13DD200A34A9F /* Main.storyboard */,
-				CBDED98925C3D51100161E1B /* CustomSegueClass.swift */,
+				CB053934263287D5003FDF5D /* GmarketSansBold.otf */,
+				CB0539312632755F003FDF5D /* GmarketSansMedium.otf */,
+				CB004D352641040A00320CCD /* ReviseViewController.swift */,
 				CB7FB30B25C265F200A34A9F /* DetailViewController.swift */,
-				CB7FB30125C13DD500A34A9F /* Info.plist */,
-				CB7FB2FE25C13DD500A34A9F /* LaunchScreen.storyboard */,
+				CB7FB2F725C13DD200A34A9F /* ViewController.swift */,
+				CBDED97825C3C26800161E1B /* GetInfoViewController.swift */,
+				CB7FB30825C2637500A34A9F /* LectureInfo.swift */,
+				CB7FB2F925C13DD200A34A9F /* Main.storyboard */,
 				CB7FB2FC25C13DD500A34A9F /* Assets.xcassets */,
+				CB7FB2FE25C13DD500A34A9F /* LaunchScreen.storyboard */,
 				CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */,
 				CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */,
+				CBDED98925C3D51100161E1B /* CustomSegueClass.swift */,
+				CB7FB30125C13DD500A34A9F /* Info.plist */,
+				CBD996BD26312D440067C56A /* Storage.swift */,
+				CB004D3726410B0400320CCD /* UISetting.swift */,
 			);
 			path = Wandoo_practice;
 			sourceTree = "<group>";
@@ -136,7 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB053935263287D5003FDF5D /* GmarketSansBold.otf in Resources */,
 				CB7FB30025C13DD500A34A9F /* LaunchScreen.storyboard in Resources */,
+				CB0539322632755F003FDF5D /* GmarketSansMedium.otf in Resources */,
 				CB7FB2FD25C13DD500A34A9F /* Assets.xcassets in Resources */,
 				CB7FB2FB25C13DD200A34A9F /* Main.storyboard in Resources */,
 			);
@@ -150,10 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7FB30925C2637500A34A9F /* LectureInfo.swift in Sources */,
+				CB004D362641040A00320CCD /* ReviseViewController.swift in Sources */,
 				CB7FB2F825C13DD200A34A9F /* ViewController.swift in Sources */,
 				CB7FB30C25C265F200A34A9F /* DetailViewController.swift in Sources */,
+				CB004D3826410B0400320CCD /* UISetting.swift in Sources */,
 				CBDED98A25C3D51100161E1B /* CustomSegueClass.swift in Sources */,
 				CBDED97925C3C26800161E1B /* GetInfoViewController.swift in Sources */,
+				CBD996BE26312D440067C56A /* Storage.swift in Sources */,
 				CB7FB2F425C13DD200A34A9F /* AppDelegate.swift in Sources */,
 				CB7FB2F625C13DD200A34A9F /* SceneDelegate.swift in Sources */,
 			);
