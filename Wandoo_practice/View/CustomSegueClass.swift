@@ -79,7 +79,7 @@ class right: UIStoryboardSegue {
                                     //이동할 위치
                                     dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
                                     //ViewController 이동할 위치
-                                    src.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width/3, y: 0)
+                                    src.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width/2, y: 0)
             },
                                    completion: { finished in
                                     // 애니메이션 완료 후 실행
@@ -98,7 +98,7 @@ class Unwind_right: UIStoryboardSegue {
         let dst = self.destination as UIViewController
         src.view.superview?.insertSubview(dst.view, belowSubview: src.view)
         src.view.transform = CGAffineTransform(translationX: 0, y: 0)
-        dst.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width/3, y: 0)
+        dst.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width/2, y: 0)
         UIView.animate(withDuration: 0.15,
                                    delay: 0.0,
                                    options: [.curveEaseIn, .curveEaseOut],

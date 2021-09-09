@@ -9,6 +9,7 @@ import UIKit
 
 class ReviseViewController: UIViewController {
 
+    @IBOutlet var reviseView: UIView!
     @IBOutlet weak var startedDate: UIDatePicker!
     @IBOutlet weak var nameOfLec: UITextField!
     let viewModel = DetailViewModel()
@@ -16,6 +17,7 @@ class ReviseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        nameOfLec.delegate = self
     }
     
     let DidDismissReviseViewController: Notification.Name = Notification.Name("DidDismissReviseViewController")
@@ -53,9 +55,15 @@ class ReviseViewController: UIViewController {
         viewModel.lecInfo?.name = nameOfLec.text!
         viewModel.lecInfo?.date = date
         viewModel.updateLec(viewModel.lecInfo!)
-        print(viewModel.lectures)
 
         NotificationCenter.default.post(name: DidDismissReviseViewController, object: viewModel.lecInfo)
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ReviseViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.reviseView.endEditing(true)
+        return true
     }
 }

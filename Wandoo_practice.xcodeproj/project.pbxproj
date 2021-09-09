@@ -3,14 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6BF4F75CB33CDF8466D71F /* Pods_Wandoo_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2950E32C3C8B2E0F3BEBF461 /* Pods_Wandoo_practice.framework */; };
 		CB004D362641040A00320CCD /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB004D352641040A00320CCD /* ReviseViewController.swift */; };
 		CB004D3826410B0400320CCD /* UISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB004D3726410B0400320CCD /* UISetting.swift */; };
 		CB0539322632755F003FDF5D /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB0539312632755F003FDF5D /* GmarketSansMedium.otf */; };
 		CB053935263287D5003FDF5D /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB053934263287D5003FDF5D /* GmarketSansBold.otf */; };
+		CB30FEB526AFB35C00E226FA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30FEB426AFB35C00E226FA /* UserNotifications.framework */; };
+		CB30FEB726AFB36500E226FA /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30FEB626AFB36500E226FA /* PushKit.framework */; };
+		CB30FEDD26AFD4BA00E226FA /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30FEDC26AFD4BA00E226FA /* NotificationViewController.swift */; };
 		CB7FB2F425C13DD200A34A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */; };
 		CB7FB2F625C13DD200A34A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */; };
 		CB7FB2F825C13DD200A34A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB2F725C13DD200A34A9F /* ViewController.swift */; };
@@ -19,16 +23,23 @@
 		CB7FB30025C13DD500A34A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7FB2FE25C13DD500A34A9F /* LaunchScreen.storyboard */; };
 		CB7FB30925C2637500A34A9F /* LectureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB30825C2637500A34A9F /* LectureInfo.swift */; };
 		CB7FB30C25C265F200A34A9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FB30B25C265F200A34A9F /* DetailViewController.swift */; };
+		CBAC0AFF264E061300C299DB /* 53513-confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC0AFE264E061300C299DB /* 53513-confetti.json */; };
 		CBD996BE26312D440067C56A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD996BD26312D440067C56A /* Storage.swift */; };
 		CBDED97925C3C26800161E1B /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDED97825C3C26800161E1B /* GetInfoViewController.swift */; };
 		CBDED98A25C3D51100161E1B /* CustomSegueClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDED98925C3D51100161E1B /* CustomSegueClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2950E32C3C8B2E0F3BEBF461 /* Pods_Wandoo_practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wandoo_practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D941369949B0B76E6526EA /* Pods-Wandoo_practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wandoo_practice.release.xcconfig"; path = "Target Support Files/Pods-Wandoo_practice/Pods-Wandoo_practice.release.xcconfig"; sourceTree = "<group>"; };
+		9DAE03730B4A619E7EAE29BB /* Pods-Wandoo_practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wandoo_practice.debug.xcconfig"; path = "Target Support Files/Pods-Wandoo_practice/Pods-Wandoo_practice.debug.xcconfig"; sourceTree = "<group>"; };
 		CB004D352641040A00320CCD /* ReviseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		CB004D3726410B0400320CCD /* UISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetting.swift; sourceTree = "<group>"; };
 		CB0539312632755F003FDF5D /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
 		CB053934263287D5003FDF5D /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
+		CB30FEB426AFB35C00E226FA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		CB30FEB626AFB36500E226FA /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		CB30FEDC26AFD4BA00E226FA /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		CB7FB2F025C13DD200A34A9F /* Wandoo_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wandoo_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +50,12 @@
 		CB7FB30125C13DD500A34A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7FB30825C2637500A34A9F /* LectureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfo.swift; sourceTree = "<group>"; };
 		CB7FB30B25C265F200A34A9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CB90A95826B6C9C4008AFE65 /* Wandoo_practiceDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wandoo_practiceDebug.entitlements; sourceTree = "<group>"; };
+		CBAC0AFE264E061300C299DB /* 53513-confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "53513-confetti.json"; sourceTree = "<group>"; };
 		CBD996BD26312D440067C56A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CBDED97825C3C26800161E1B /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
 		CBDED98925C3D51100161E1B /* CustomSegueClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueClass.swift; sourceTree = "<group>"; };
+		CBE148FC26B948C100B1F2A3 /* Wandoo_practice.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Wandoo_practice.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB30FEB726AFB36500E226FA /* PushKit.framework in Frameworks */,
+				CB30FEB526AFB35C00E226FA /* UserNotifications.framework in Frameworks */,
+				3F6BF4F75CB33CDF8466D71F /* Pods_Wandoo_practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CE55C4F1A7E93B774621972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB30FEB626AFB36500E226FA /* PushKit.framework */,
+				CB30FEB426AFB35C00E226FA /* UserNotifications.framework */,
+				2950E32C3C8B2E0F3BEBF461 /* Pods_Wandoo_practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1FF0197FEA5357EB209D984 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE03730B4A619E7EAE29BB /* Pods-Wandoo_practice.debug.xcconfig */,
+				82D941369949B0B76E6526EA /* Pods-Wandoo_practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CB7FB2E725C13DD200A34A9F = {
 			isa = PBXGroup;
 			children = (
 				CB7FB2F225C13DD200A34A9F /* Wandoo_practice */,
 				CB7FB2F125C13DD200A34A9F /* Products */,
+				B1FF0197FEA5357EB209D984 /* Pods */,
+				9CE55C4F1A7E93B774621972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,24 +112,60 @@
 		CB7FB2F225C13DD200A34A9F /* Wandoo_practice */ = {
 			isa = PBXGroup;
 			children = (
-				CB053934263287D5003FDF5D /* GmarketSansBold.otf */,
-				CB0539312632755F003FDF5D /* GmarketSansMedium.otf */,
-				CB004D352641040A00320CCD /* ReviseViewController.swift */,
-				CB7FB30B25C265F200A34A9F /* DetailViewController.swift */,
-				CB7FB2F725C13DD200A34A9F /* ViewController.swift */,
-				CBDED97825C3C26800161E1B /* GetInfoViewController.swift */,
-				CB7FB30825C2637500A34A9F /* LectureInfo.swift */,
-				CB7FB2F925C13DD200A34A9F /* Main.storyboard */,
+				CB90A95C26B7ABBB008AFE65 /* VC */,
+				CB90A95B26B7AB65008AFE65 /* Model */,
+				CB90A95A26B7AB49008AFE65 /* View */,
+				CB90A95926B7AAF0008AFE65 /* Font */,
+				CBAC0AFE264E061300C299DB /* 53513-confetti.json */,
+				CBE148FC26B948C100B1F2A3 /* Wandoo_practice.entitlements */,
+				CB90A95826B6C9C4008AFE65 /* Wandoo_practiceDebug.entitlements */,
 				CB7FB2FC25C13DD500A34A9F /* Assets.xcassets */,
 				CB7FB2FE25C13DD500A34A9F /* LaunchScreen.storyboard */,
 				CB7FB2F325C13DD200A34A9F /* AppDelegate.swift */,
 				CB7FB2F525C13DD200A34A9F /* SceneDelegate.swift */,
-				CBDED98925C3D51100161E1B /* CustomSegueClass.swift */,
 				CB7FB30125C13DD500A34A9F /* Info.plist */,
-				CBD996BD26312D440067C56A /* Storage.swift */,
-				CB004D3726410B0400320CCD /* UISetting.swift */,
 			);
 			path = Wandoo_practice;
+			sourceTree = "<group>";
+		};
+		CB90A95926B7AAF0008AFE65 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CB053934263287D5003FDF5D /* GmarketSansBold.otf */,
+				CB0539312632755F003FDF5D /* GmarketSansMedium.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		CB90A95A26B7AB49008AFE65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FB2F925C13DD200A34A9F /* Main.storyboard */,
+				CB004D3726410B0400320CCD /* UISetting.swift */,
+				CBDED98925C3D51100161E1B /* CustomSegueClass.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB90A95B26B7AB65008AFE65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FB30825C2637500A34A9F /* LectureInfo.swift */,
+				CBD996BD26312D440067C56A /* Storage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB90A95C26B7ABBB008AFE65 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CB004D352641040A00320CCD /* ReviseViewController.swift */,
+				CB7FB30B25C265F200A34A9F /* DetailViewController.swift */,
+				CB7FB2F725C13DD200A34A9F /* ViewController.swift */,
+				CBDED97825C3C26800161E1B /* GetInfoViewController.swift */,
+				CB30FEDC26AFD4BA00E226FA /* NotificationViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB7FB30425C13DD500A34A9F /* Build configuration list for PBXNativeTarget "Wandoo_practice" */;
 			buildPhases = (
+				7DDAAA22CBFC54017733CEF5 /* [CP] Check Pods Manifest.lock */,
 				CB7FB2EC25C13DD200A34A9F /* Sources */,
 				CB7FB2ED25C13DD200A34A9F /* Frameworks */,
 				CB7FB2EE25C13DD200A34A9F /* Resources */,
+				6E7AFDF53258EB36D0B64234 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB053935263287D5003FDF5D /* GmarketSansBold.otf in Resources */,
+				CBAC0AFF264E061300C299DB /* 53513-confetti.json in Resources */,
 				CB7FB30025C13DD500A34A9F /* LaunchScreen.storyboard in Resources */,
 				CB0539322632755F003FDF5D /* GmarketSansMedium.otf in Resources */,
 				CB7FB2FD25C13DD500A34A9F /* Assets.xcassets in Resources */,
@@ -161,12 +238,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E7AFDF53258EB36D0B64234 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wandoo_practice/Pods-Wandoo_practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wandoo_practice/Pods-Wandoo_practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wandoo_practice/Pods-Wandoo_practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DDAAA22CBFC54017733CEF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wandoo_practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB7FB2EC25C13DD200A34A9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CB7FB30925C2637500A34A9F /* LectureInfo.swift in Sources */,
+				CB30FEDD26AFD4BA00E226FA /* NotificationViewController.swift in Sources */,
 				CB004D362641040A00320CCD /* ReviseViewController.swift in Sources */,
 				CB7FB2F825C13DD200A34A9F /* ViewController.swift in Sources */,
 				CB7FB30C25C265F200A34A9F /* DetailViewController.swift in Sources */,
@@ -234,6 +354,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -295,6 +416,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -319,39 +441,45 @@
 		};
 		CB7FB30525C13DD500A34A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DAE03730B4A619E7EAE29BB /* Pods-Wandoo_practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wandoo_practice/Wandoo_practiceDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MYR6MP3VKX;
 				INFOPLIST_FILE = Wandoo_practice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.linda.Wandoo-practice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.linda.Wandoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CB7FB30625C13DD500A34A9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D941369949B0B76E6526EA /* Pods-Wandoo_practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wandoo_practice/Wandoo_practice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MYR6MP3VKX;
 				INFOPLIST_FILE = Wandoo_practice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.linda.Wandoo-practice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.linda.Wandoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

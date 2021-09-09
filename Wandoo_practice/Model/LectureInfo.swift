@@ -37,7 +37,6 @@ class LectureManager {
     var lectures: [LectureInfo] = []
 
     func createLecture(name: String, date: String, numOfLec: String) -> LectureInfo {
-        // [x] TODO: create로직 추가
         let nextId = LectureManager.lastId + 1
         LectureManager.lastId = nextId
         let selectedArr = [Bool](repeating: false, count: Int(numOfLec)!)
@@ -52,14 +51,7 @@ class LectureManager {
         saveLec()
     }
     
-//    func countDone(_ lec: LectureInfo) -> Int {
-//        let isDone = lec.isDone
-//        let numberOfTrue = isDone.filter{$0}.count
-//        return Int(numberOfTrue)
-//    }
-    
     func addLec(_ lec: LectureInfo) {
-        // [x] TODO: add로직 추가
         lectures.append(lec)
         saveLec()
     }
@@ -68,35 +60,14 @@ class LectureManager {
         lectures = lectures.filter { $0.id != lec.id }
         saveLec()
     }
-    
-//    func selectedButton(_ lec: LectureInfo, _ idx: Int){
-//        var newArr = lec.isDone
-//        print(idx)
-//        if newArr[idx] == true {
-//            newArr[idx] = false
-//        } else {
-//            newArr[idx] = true
-//        }
-//        guard let index = lectures.firstIndex(of: lec) else { return }
-//        lectures[index].update(isDone: newArr)
-//        saveLec()
-//        print("썅썅썅....^^")
-//    }
-//    
-//    func updateBtn(_ todo: Todo) {
-//        // [x] TODO: updatee 로직 추가
-//        guard let index = todos.firstIndex(of: todo) else { return }
-//        todos[index].update(isDone: todo.isDone, detail: todo.detail, isToday: todo.isToday)
-//        saveTodo()
-//    }
-//
+
     func saveLec() {
         Storage.store(lectures, to: .documents, as: "lectures.json")
     }
 
+    // 디스크에 썼던 내용을 실제로 메모리에 올리는 과정
     func retrieveLec() {
         lectures = Storage.retrive("lectures.json", from: .documents, as: [LectureInfo].self) ?? []
-
         let lastId = lectures.last?.id ?? 0
         LectureManager.lastId = lastId
     }
@@ -114,27 +85,7 @@ class DetailViewModel {
     var lectures: [LectureInfo] {
         return manager.lectures
     }
-    
-//    func changeArr(_ lec: LectureInfo, _ idx: Int) {
-//        manager.selectedButton(lec, idx)
-//    }
-//
-//    var todayTodos: [Todo] {
-//        return todos.filter { $0.isToday == true }
-//    }
-//
-//    var upcompingTodos: [Todo] {
-//        return todos.filter { $0.isToday == false }
-//    }
-//
-//    var numOfSection: Int {
-//        return Section.allCases.count
-//    }
-    
-//    func getIndex(_ lec: LectureInfo) {
-//        manager.getIndex(lec)
-//    }
-    
+
     var numOfLec: Int{
         return lectures.count
     }
@@ -146,11 +97,7 @@ class DetailViewModel {
     func deleteLec(_ lec: LectureInfo) {
         manager.deleteLec(lec)
     }
-//
-//    func updateTodo(_ todo: Todo) {
-//        manager.updateTodo(todo)
-//    }
-//
+
     func loadTasks() {
         manager.retrieveLec()
     }
@@ -158,8 +105,4 @@ class DetailViewModel {
     func updateLec(_ lec: LectureInfo) {
         manager.updateLec(lec)
     }
-//
-//    func countDone(_ lec: LectureInfo) {
-//        manager.countDone(lec)
-//    }
 }

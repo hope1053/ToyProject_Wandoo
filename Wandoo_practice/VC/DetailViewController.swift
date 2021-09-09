@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Lottie
 
 class DetailViewController: UIViewController {
     
     let DidDismissaDetailViewController: Notification.Name = Notification.Name("DidDismissaDetailViewController")
+    let DeletedDetailViewController: Notification.Name = Notification.Name("DeletedDetailViewController")
     
+    @IBOutlet weak var bgBar: UIView!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
     @IBOutlet var detailView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -24,13 +27,28 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var progessWidth: NSLayoutConstraint!
     
     let viewModel = DetailViewModel()
+    var tableViewContentHeight: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.didDismissReviseNotification(_:)), name: NSNotification.Name(rawValue: "DidDismissReviseViewController"), object: nil)
+        self.tableView.rowHeight = 44
+        moreButton.tintColor = buttonColorForDarkMode
+    }
+    
+    override func viewDidLayoutSubviews() {
+        tableViewContentHeight = tableView.contentSize.height
+        setTableView(tableViewContentHeight)
+    }
+    
+    func setTableView(_ contentHeight: CGFloat){
+        if tableView.frame.height > tableViewContentHeight {
+            tableView.frame = CGRect(x: tableView.frame.origin.x, y: tableView.frame.origin.y, width: tableView.frame.size.width, height: tableViewContentHeight)
+            detailView.layoutIfNeeded()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,7 +61,7 @@ class DetailViewController: UIViewController {
     }
 
     @objc func didDismissReviseNotification(_ noti: Notification) {
-            OperationQueue.main.addOperation { // DispatchQueue도 가능.
+            OperationQueue.main.addOperation {
                 let newViewInfo = noti.object as? LectureInfo
                 self.tableView.reloadData()
                 self.viewModel.loadTasks()
@@ -57,11 +75,16 @@ class DetailViewController: UIViewController {
             lectureLabel.text = lecInfo.name
             dateLabel.text = lecInfo.date
             numLabel.text = "\(lecInfo.numOfLec)"
-            progressBar.layer.cornerRadius = 10
+            bgBar.layer.cornerRadius = 7
+            progressBar.layer.cornerRadius = 7
             doneLecNum.text = String(lecInfo.isDone.filter{$0}.count)
             let numOfTrue = Double(lecInfo.doneNumOfLec) / Double(lecInfo.numOfLec)!
             progessWidth.constant = (detailView.bounds.width - 60) * (0.05 + 0.95 * CGFloat(numOfTrue))
         }
+        self.tableView.separatorColor = buttonColorForDarkMode
+        self.tableView.layer.masksToBounds = true
+        self.tableView.layer.borderColor = buttonColorForDarkMode.cgColor
+        self.tableView.layer.borderWidth = 2.0
     }
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -74,15 +97,18 @@ class DetailViewController: UIViewController {
         NotificationCenter.default.post(name: DidDismissaDetailViewController, object: nil, userInfo: nil)
     }
     
-    // 해당 강의 관련 내용 수정 및 삭제 alerty dialog 구현
+    // 해당 강의 관련 내용 수정 및 삭제 alert dialog 구현
     @IBAction func makeAlertDialog(_ sender: UIButton) {
         let alert = UIAlertController(title: viewModel.lecInfo?.name, message: nil, preferredStyle: .actionSheet)
         
         let lecture: LectureInfo = viewModel.lecInfo!
         
+        let cacelBtn = UIAlertAction(title: "취소", style: .cancel) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
         let deleteBtn = UIAlertAction(title: "삭제", style: .destructive) { (action) in
             self.viewModel.deleteLec(lecture)
-            NotificationCenter.default.post(name: self.DidDismissaDetailViewController, object: nil, userInfo: nil)
+            NotificationCenter.default.post(name: self.DeletedDetailViewController, object: nil, userInfo: nil)
             self.performSegue(withIdentifier: "unwind", sender: nil)
         }
         let reviseBtn = UIAlertAction(title: "수정", style: .default) { (action) in
@@ -91,6 +117,7 @@ class DetailViewController: UIViewController {
         
         alert.addAction(reviseBtn)
         alert.addAction(deleteBtn)
+        alert.addAction(cacelBtn)
         
         self.present(alert, animated: true, completion: {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissAlertController))
@@ -127,32 +154,56 @@ extension DetailViewController: UITableViewDataSource {
             self.viewModel.updateLec(lecture)
             self.viewModel.update(model: lecture)
             self.tableView.reloadData()
+            self.setTableView(self.tableViewContentHeight)
+            self.tableView.setNeedsLayout()
+            self.tableView.layoutIfNeeded()
             
             self.doneLecNum.text = String(lecture.isDone.filter{$0}.count)
             let numOfTrue = Double(lecture.doneNumOfLec) / Double(lecture.numOfLec)!
             self.progessWidth.constant = (self.detailView.bounds.width - 60) * (0.05 + 0.95 * CGFloat(numOfTrue))
+            
+            if lecture.doneNumOfLec == Int(lecture.numOfLec) {
+                let animationView = Lottie.AnimationView(name: "53513-confetti")
+
+                animationView.frame = CGRect(x:0, y:100, width:400, height:400)
+                animationView.contentMode = .scaleAspectFill
+                animationView.isUserInteractionEnabled = false
+
+                self.detailView.addSubview(animationView)
+                animationView.play{ (finished) in
+                    animationView.removeFromSuperview()
+                }
+            }
         }
+        
         cell.saveMemoHandler = { text in
             lecture.memos[indexPath.item] = text
             self.viewModel.updateLec(lecture)
             self.viewModel.update(model: lecture)
             self.tableView.reloadData()
         }
+        
         return cell
     }
 }
 
 extension DetailViewController {
-    @objc private func adjustInputView(noti: Notification) {
-        guard let userInfo = noti.userInfo else { return }
-        guard let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
         
-        if noti.name == UIResponder.keyboardWillShowNotification {
-            let adjustmentHeight = keyboardFrame.height - view.safeAreaInsets.bottom
-            tableViewBottom.constant = adjustmentHeight
-        } else {
-            tableViewBottom.constant = 0
+        let isLonger = tableView.frame.minY + tableView.bounds.height >= detailView.bounds.height - (keyboardViewEndFrame.height - view.safeAreaInsets.bottom)/2
+        let isShorter = detailView.bounds.height - (keyboardViewEndFrame.height - view.safeAreaInsets.bottom)/2 >= tableView.frame.minY + tableView.bounds.height && tableView.frame.minY + tableView.bounds.height > detailView.bounds.height - (keyboardViewEndFrame.height - view.safeAreaInsets.bottom)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            tableView.contentInset = .zero
+        } else if notification.name == UIResponder.keyboardWillShowNotification && isShorter {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: (keyboardViewEndFrame.height - view.safeAreaInsets.bottom) * 3 / 4, right: 0)
+        } else if notification.name == UIResponder.keyboardWillShowNotification && isLonger {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
         }
+        tableView.scrollIndicatorInsets = tableView.contentInset
     }
 }
 
@@ -160,9 +211,18 @@ class checkLecture: UITableViewCell {
     @IBOutlet weak var num: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var firstBar: UIView!
+    @IBOutlet weak var secondBar: UIView!
     
     var doneButtonTapHandler: ((Bool) -> Void)?
     var saveMemoHandler: ((String) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        inputTextField.delegate = self
+        firstBar.backgroundColor = buttonColorForDarkMode
+        secondBar.backgroundColor = buttonColorForDarkMode
+    }
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         doneButton.isSelected = !doneButton.isSelected
@@ -179,5 +239,12 @@ class checkLecture: UITableViewCell {
     func updateUI(_ lec: LectureInfo, _ idx: Int){
         doneButton.isSelected = lec.isDone[idx]
         inputTextField.text = lec.memos[idx]
+    }
+}
+
+extension checkLecture: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.inputTextField.resignFirstResponder()
+        return true
     }
 }
