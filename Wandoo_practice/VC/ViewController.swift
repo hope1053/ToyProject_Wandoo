@@ -9,6 +9,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UNUserNotificationCenterDelegate {
+    
     var feedbackGenerator: UINotificationFeedbackGenerator?
     
     @IBOutlet weak var settingButton: UIButton!
