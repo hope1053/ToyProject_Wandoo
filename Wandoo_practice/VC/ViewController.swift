@@ -9,6 +9,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UNUserNotificationCenterDelegate {
+    var feedbackGenerator: UINotificationFeedbackGenerator?
     
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var tmpLabel: UILabel!
@@ -37,8 +38,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         NotificationCenter.default.addObserver(self, selector: #selector(self.DeletedDetailNotification(_:)), name: NSNotification.Name(rawValue: "DeletedDetailViewController"), object: nil)
         
         requestNotificationAuthorization()
-        
-        
+        self.setupGenerator()
+    }
+    
+    private func setupGenerator() {
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
     
     func requestNotificationAuthorization() {
@@ -85,6 +90,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.lectureTable.reloadData()
                 self.viewModel.loadTasks()
                 self.showAddLable()
+                self.feedbackGenerator?.notificationOccurred(.success)
                 self.showToast(message: "강의가 추가되었습니다(ღ'ᴗ'ღ) ", font: UIFont(name: "GmarketSansMedium", size: 14)!)
             }
     }

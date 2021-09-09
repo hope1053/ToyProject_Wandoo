@@ -8,6 +8,7 @@
 import UIKit
 
 class GetInfoViewController: UIViewController {
+    var feedbackGenerator: UINotificationFeedbackGenerator?
     
     @IBOutlet weak var createLabel: UILabel!
     @IBOutlet var getInfoview: UIView!
@@ -27,6 +28,12 @@ class GetInfoViewController: UIViewController {
         super.viewDidLoad()
         warningMessage.alpha = 0
         nameOfLec.delegate = self
+        self.setupGenerator()
+    }
+    
+    private func setupGenerator() {
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
     
     @IBAction func bgTapped(_ sender: Any) {
@@ -45,9 +52,10 @@ class GetInfoViewController: UIViewController {
         sendDate(pickDate)
         guard let name = nameOfLec.text, name.isEmpty == false else { return }
         guard let num = numOfLec.text, num.isEmpty == false else {return}
-        if Int(num)! >= 100 {
+        if Int(num)! >= 200 {
             numOfLec.textColor = #colorLiteral(red: 1, green: 0.3091483116, blue: 0.2951850593, alpha: 1)
             warningMessage.alpha = 1
+            self.feedbackGenerator?.notificationOccurred(.error)
             createLabel.shake(duration: 0.5)
             createButton.shake(duration: 0.5)
             return

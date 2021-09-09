@@ -10,6 +10,8 @@ import Lottie
 
 class DetailViewController: UIViewController {
     
+    var feedbackGenerator: UINotificationFeedbackGenerator?
+    
     let DidDismissaDetailViewController: Notification.Name = Notification.Name("DidDismissaDetailViewController")
     let DeletedDetailViewController: Notification.Name = Notification.Name("DeletedDetailViewController")
     
@@ -37,11 +39,17 @@ class DetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.didDismissReviseNotification(_:)), name: NSNotification.Name(rawValue: "DidDismissReviseViewController"), object: nil)
         self.tableView.rowHeight = 44
         moreButton.tintColor = buttonColorForDarkMode
+        self.setupGenerator()
     }
     
     override func viewDidLayoutSubviews() {
         tableViewContentHeight = tableView.contentSize.height
         setTableView(tableViewContentHeight)
+    }
+    
+    private func setupGenerator() {
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
     }
     
     func setTableView(_ contentHeight: CGFloat){
@@ -63,6 +71,7 @@ class DetailViewController: UIViewController {
     @objc func didDismissReviseNotification(_ noti: Notification) {
             OperationQueue.main.addOperation {
                 let newViewInfo = noti.object as? LectureInfo
+                self.feedbackGenerator?.notificationOccurred(.success)
                 self.tableView.reloadData()
                 self.viewModel.loadTasks()
                 self.viewModel.update(model: newViewInfo)
@@ -161,6 +170,8 @@ extension DetailViewController: UITableViewDataSource {
             self.doneLecNum.text = String(lecture.isDone.filter{$0}.count)
             let numOfTrue = Double(lecture.doneNumOfLec) / Double(lecture.numOfLec)!
             self.progessWidth.constant = (self.detailView.bounds.width - 60) * (0.05 + 0.95 * CGFloat(numOfTrue))
+            
+            self.feedbackGenerator?.notificationOccurred(.success)
             
             if lecture.doneNumOfLec == Int(lecture.numOfLec) {
                 let animationView = Lottie.AnimationView(name: "53513-confetti")
