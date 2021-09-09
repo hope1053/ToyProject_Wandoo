@@ -257,8 +257,8 @@
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100강 미만으로 써주세요 : (" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-G0-be7">
-                                <rect key="frame" x="208" y="250.66666666666663" width="161" height="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200강 미만으로 써주세요 : (" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-G0-be7">
+                                <rect key="frame" x="205.66666666666663" y="250.66666666666663" width="163.33333333333337" height="13"/>
                                 <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.38823529411764707" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>

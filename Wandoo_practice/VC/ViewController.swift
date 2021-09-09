@@ -107,6 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.lectureTable.reloadData()
                 self.viewModel.loadTasks()
                 self.showAddLable()
+                self.feedbackGenerator?.notificationOccurred(.success)
                 self.showToast(message: "강의가 삭제되었습니다(ღ'ᴗ'ღ) ", font: UIFont(name: "GmarketSansMedium", size: 14)!)
             }
     }
