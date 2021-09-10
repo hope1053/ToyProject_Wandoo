@@ -72,9 +72,10 @@ class DetailViewController: UIViewController {
             OperationQueue.main.addOperation {
                 let newViewInfo = noti.object as? LectureInfo
                 self.feedbackGenerator?.notificationOccurred(.success)
+                self.viewModel.lecInfo = newViewInfo
+//                self.viewModel.update(model: newViewInfo)
                 self.tableView.reloadData()
                 self.viewModel.loadTasks()
-                self.viewModel.update(model: newViewInfo)
                 self.updateUI()
             }
     }

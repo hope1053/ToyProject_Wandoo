@@ -100,6 +100,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             OperationQueue.main.addOperation {
                 self.lectureTable.reloadData()
                 self.viewModel.loadTasks()
+                print(self.viewModel.lectures)
             }
     }
     

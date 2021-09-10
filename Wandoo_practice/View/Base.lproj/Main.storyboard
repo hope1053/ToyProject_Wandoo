@@ -672,10 +672,6 @@
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Dns-Cz-1QP">
-                                <rect key="frame" x="47" y="240" width="320" height="140"/>
-                                <locale key="locale" localeIdentifier="ko_KR"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztc-Jr-gDK" customClass="UIRoundButton" customModule="Wandoo_practice" customModuleProvider="target">
                                 <rect key="frame" x="45" y="724" width="324" height="59"/>
                                 <color key="backgroundColor" red="0.2583136379" green="1" blue="0.22602559950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -689,17 +685,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Dns-Cz-1QP">
+                                <rect key="frame" x="47" y="335" width="320" height="140"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
+                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 시작 날짜는요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP0-fW-VrF">
-                                <rect key="frame" x="40" y="208" width="151.33333333333334" height="17"/>
+                                <rect key="frame" x="40" y="303" width="151.33333333333334" height="17"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의는 총 몇 강 인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAx-cQ-FBV">
+                                <rect key="frame" x="40" y="208" width="177" height="17"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-Hz-2P1">
+                                <rect key="frame" x="40" y="240" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XA-la-wHp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="oP0-fW-VrF" firstAttribute="leading" secondItem="PAx-cQ-FBV" secondAttribute="leading" id="0bR-Vt-6JP"/>
                             <constraint firstItem="5XA-la-wHp" firstAttribute="trailing" secondItem="B8V-KT-uiN" secondAttribute="trailing" constant="40" id="5JJ-bf-mJm"/>
                             <constraint firstItem="j6T-XG-E6Z" firstAttribute="leading" secondItem="5XA-la-wHp" secondAttribute="leading" constant="40" id="5ZJ-cz-hKv"/>
                             <constraint firstItem="j6T-XG-E6Z" firstAttribute="top" secondItem="kqV-7K-zu6" secondAttribute="bottom" constant="45" id="7aa-rd-30B"/>
@@ -707,17 +719,21 @@
                             <constraint firstItem="kqV-7K-zu6" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="DdI-qp-d7A"/>
                             <constraint firstItem="Ztc-Jr-gDK" firstAttribute="width" secondItem="sgc-O6-kqh" secondAttribute="width" multiplier="0.782609" id="IJ2-Wv-xWy"/>
                             <constraint firstItem="Ztc-Jr-gDK" firstAttribute="height" secondItem="sgc-O6-kqh" secondAttribute="height" multiplier="0.0700713" id="JEX-Xg-t5U"/>
-                            <constraint firstItem="oP0-fW-VrF" firstAttribute="leading" secondItem="j6T-XG-E6Z" secondAttribute="leading" id="R7w-yQ-ZXi"/>
+                            <constraint firstItem="fXa-Hz-2P1" firstAttribute="leading" secondItem="PAx-cQ-FBV" secondAttribute="leading" id="Nmj-2y-F8Y"/>
                             <constraint firstItem="Dns-Cz-1QP" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="TPS-Zl-gOs"/>
+                            <constraint firstItem="fXa-Hz-2P1" firstAttribute="trailing" secondItem="B8V-KT-uiN" secondAttribute="trailing" id="Xv7-qk-L3Z"/>
+                            <constraint firstItem="PAx-cQ-FBV" firstAttribute="top" secondItem="B8V-KT-uiN" secondAttribute="bottom" constant="29" id="YsB-WI-5Qb"/>
                             <constraint firstItem="kqV-7K-zu6" firstAttribute="top" secondItem="5XA-la-wHp" secondAttribute="top" constant="38" id="aCR-MC-A0r"/>
                             <constraint firstItem="B8V-KT-uiN" firstAttribute="top" secondItem="j6T-XG-E6Z" secondAttribute="bottom" constant="15" id="bQS-Lo-qW5"/>
+                            <constraint firstItem="fXa-Hz-2P1" firstAttribute="top" secondItem="PAx-cQ-FBV" secondAttribute="bottom" constant="15" id="cHJ-Ul-EX4"/>
+                            <constraint firstItem="oP0-fW-VrF" firstAttribute="top" secondItem="fXa-Hz-2P1" secondAttribute="bottom" constant="29" id="ddS-So-Qze"/>
                             <constraint firstItem="rL1-16-mzz" firstAttribute="centerX" secondItem="Ztc-Jr-gDK" secondAttribute="centerX" id="fqG-jp-3dG"/>
                             <constraint firstItem="Dns-Cz-1QP" firstAttribute="height" secondItem="sgc-O6-kqh" secondAttribute="height" multiplier="0.166271" id="h2y-xc-oSJ"/>
                             <constraint firstItem="Ztc-Jr-gDK" firstAttribute="centerX" secondItem="5XA-la-wHp" secondAttribute="centerX" id="kBA-d1-bKH"/>
                             <constraint firstItem="rL1-16-mzz" firstAttribute="centerY" secondItem="Ztc-Jr-gDK" secondAttribute="centerY" id="lL7-20-OEB"/>
                             <constraint firstItem="B8V-KT-uiN" firstAttribute="leading" secondItem="j6T-XG-E6Z" secondAttribute="leading" id="qc2-m4-jh5"/>
                             <constraint firstItem="Dns-Cz-1QP" firstAttribute="top" secondItem="oP0-fW-VrF" secondAttribute="bottom" constant="15" id="vct-m4-0I6"/>
-                            <constraint firstItem="oP0-fW-VrF" firstAttribute="top" secondItem="B8V-KT-uiN" secondAttribute="bottom" constant="29" id="y0G-l6-Qoa"/>
+                            <constraint firstItem="PAx-cQ-FBV" firstAttribute="leading" secondItem="j6T-XG-E6Z" secondAttribute="leading" id="wwy-10-RTX"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="XGi-BK-8a6" appends="YES" id="lkV-me-Be4"/>
@@ -725,6 +741,7 @@
                     </view>
                     <connections>
                         <outlet property="nameOfLec" destination="B8V-KT-uiN" id="b6N-S2-ABT"/>
+                        <outlet property="numberOfLec" destination="fXa-Hz-2P1" id="hYu-iF-zKc"/>
                         <outlet property="reviseView" destination="sgc-O6-kqh" id="zfu-tw-4Yq"/>
                         <outlet property="startedDate" destination="Dns-Cz-1QP" id="Mxn-qO-fps"/>
                     </connections>
