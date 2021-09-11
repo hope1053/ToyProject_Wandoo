@@ -11,6 +11,7 @@ import Lottie
 class DetailViewController: UIViewController {
     
     var feedbackGenerator: UINotificationFeedbackGenerator?
+    var selectionFeedbackGenerator: UISelectionFeedbackGenerator?
     
     let DidDismissaDetailViewController: Notification.Name = Notification.Name("DidDismissaDetailViewController")
     let DeletedDetailViewController: Notification.Name = Notification.Name("DeletedDetailViewController")
@@ -172,8 +173,9 @@ extension DetailViewController: UITableViewDataSource {
             let numOfTrue = Double(lecture.doneNumOfLec) / Double(lecture.numOfLec)!
             self.progessWidth.constant = (self.detailView.bounds.width - 60) * (0.05 + 0.95 * CGFloat(numOfTrue))
             
-            self.feedbackGenerator?.notificationOccurred(.success)
-            
+            self.selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+            self.selectionFeedbackGenerator?.selectionChanged()
+
             if lecture.doneNumOfLec == Int(lecture.numOfLec) {
                 let animationView = Lottie.AnimationView(name: "53513-confetti")
 
